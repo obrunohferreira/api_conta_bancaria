@@ -24,9 +24,6 @@ public class Conta {
     @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
     private List<Transacao> transacoes;
 
-    public Conta(Double saldo) {
-        this.saldo = 0.0;
-    }
 
     public Long getIdConta() {
         return idConta;
@@ -60,11 +57,11 @@ public class Conta {
         this.usuario = usuario;
     }
 
-    //public List<Transacao> getTransacoes() {
-    //    return transacoes;
-    //}
+    public List<Transacao> getTransacoes() {
+        return transacoes;
+    }
 
-    //public void setTransacoes(List<Transacao> transacoes) {
-    //    this.transacoes = transacoes;
-    //}
+    public void setTransacoes(List<Transacao> transacoes) {
+        this.transacoes = transacoes;
+    }
 }
