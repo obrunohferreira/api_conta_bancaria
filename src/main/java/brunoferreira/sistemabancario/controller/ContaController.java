@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import brunoferreira.sistemabancario.model.Conta;
-import brunoferreira.sistemabancario.model.Usuario;
 import brunoferreira.sistemabancario.service.ContaService;
 
 @RestController

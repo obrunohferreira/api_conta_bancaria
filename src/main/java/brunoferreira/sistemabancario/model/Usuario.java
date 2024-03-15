@@ -19,6 +19,14 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Conta> contas;
 
+    public Usuario() {
+    }
+    
+    public Usuario(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
     public Long getIdUsuario() {
         return idUsuario;
     }

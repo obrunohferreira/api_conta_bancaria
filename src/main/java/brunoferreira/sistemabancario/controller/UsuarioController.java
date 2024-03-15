@@ -20,6 +20,4 @@ public class UsuarioController {
     public Usuario salvarUsuario(@RequestBody Usuario usuario){
         return service.salvaUsuario(usuario);
     }
-
-
 }
