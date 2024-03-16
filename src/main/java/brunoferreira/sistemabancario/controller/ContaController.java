@@ -17,7 +17,7 @@ public class ContaController {
 
     @PostMapping("/salvarConta")
     @ResponseStatus(HttpStatus.OK)
-    public Conta salvarUsuario(@RequestBody Conta conta){
+    public Conta realizaDeposito(@RequestBody Conta conta){
         return service.salvaConta(conta);
     }
 

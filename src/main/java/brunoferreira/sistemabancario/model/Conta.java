@@ -24,6 +24,15 @@ public class Conta {
     @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
     private List<Transacao> transacoes;
 
+    public Conta() {
+    }
+
+    public Conta(Long idConta, Double saldo, String tipo, Usuario usuario) {
+        this.idConta = idConta;
+        this.saldo = saldo;
+        this.tipo = tipo;
+        this.usuario = usuario;
+    }
 
     public Long getIdConta() {
         return idConta;
