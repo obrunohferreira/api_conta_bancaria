@@ -2,13 +2,12 @@ package brunoferreira.sistemabancario.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import brunoferreira.sistemabancario.model.Conta;
 import brunoferreira.sistemabancario.service.ContaService;
+
+import java.util.List;
 
 @RestController
 public class ContaController {
@@ -19,6 +18,12 @@ public class ContaController {
     @ResponseStatus(HttpStatus.OK)
     public Conta realizaDeposito(@RequestBody Conta conta){
         return service.salvaConta(conta);
+    }
+
+    @GetMapping("listarContas")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Conta> listarContas(){
+        return service.listaContas();
     }
 
 }
