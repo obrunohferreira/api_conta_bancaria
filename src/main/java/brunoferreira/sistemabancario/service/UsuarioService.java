@@ -16,7 +16,11 @@ public class UsuarioService {
 
     //Salva um usuario
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Usuario salvaUsuario(String nome, String cpf){
+=======
+    public Usuario salvarUsuario(String nome, String cpf){
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
 =======
     public Usuario salvarUsuario(String nome, String cpf){
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
@@ -24,6 +28,7 @@ public class UsuarioService {
         return repository.save(usuario);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     //Lista todos usuarios
     public List<Usuario> listaUsuarios(){
@@ -41,6 +46,10 @@ public class UsuarioService {
     //Atualiza um usuario
     public Usuario atualizarUsuario(Long idUsuario, Usuario usuario){
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
+=======
+    //Atualiza um usuario
+    public Usuario atualizarUsuario(Long idUsuario, Usuario usuario){
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
         //Verifica se o usuário existe no banco de dados
         Optional<Usuario> usuarioOptional = repository.findById(idUsuario);
         if (usuarioOptional.isEmpty()) {
@@ -49,8 +58,11 @@ public class UsuarioService {
 
         return repository.saveAndFlush(usuario);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
     }
 
     //Apaga um usuario
@@ -72,6 +84,9 @@ public class UsuarioService {
     //Lista usuario por id
     public Optional<Usuario> listarUsuarioId(Long idUsuario){
         return repository.findById(idUsuario);
+<<<<<<< HEAD
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
+=======
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
     }
 

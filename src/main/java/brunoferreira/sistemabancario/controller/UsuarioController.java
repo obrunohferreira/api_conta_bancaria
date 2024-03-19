@@ -14,20 +14,27 @@ import java.util.Optional;
 @RestController
 public class UsuarioController {
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Autowired
     private UsuarioService service;
 
 =======
+=======
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
     //Injetando o a classe service
     @Autowired
     private UsuarioService service;
 
     //Salva um novo usuario
+<<<<<<< HEAD
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
+=======
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
     @PostMapping("/salvarUsuario")
     @ResponseStatus(HttpStatus.OK)
     public Usuario salvarUsuario(@RequestParam String nome,
                                  @RequestParam String cpf){
+<<<<<<< HEAD
 <<<<<<< HEAD
         return service.salvaUsuario(nome, cpf);
     }
@@ -45,6 +52,8 @@ public class UsuarioController {
     }
 
 =======
+=======
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
         return service.salvarUsuario(nome, cpf);
     }
 
@@ -63,15 +72,21 @@ public class UsuarioController {
     }
 
     //Atualiza usuario pelo ID
+<<<<<<< HEAD
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
+=======
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
     @PutMapping("/atualizarUsuario/{idUsuario}")
     @ResponseStatus(HttpStatus.OK)
     public Usuario atualizarUsuario(@PathVariable Long idUsuario, @RequestBody Usuario usuario){
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return service.atualizaUsuario(idUsuario, usuario);
     }
 =======
+=======
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
         return service.atualizarUsuario(idUsuario, usuario);
     }
 
@@ -83,5 +98,8 @@ public class UsuarioController {
     }
 
 
+<<<<<<< HEAD
+>>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
+=======
 >>>>>>> dae300aba825dd54cbd88a7c25c00aed8ab49d78
 }
