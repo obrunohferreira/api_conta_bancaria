@@ -21,21 +21,20 @@ public class UsuarioController {
     @ResponseStatus(HttpStatus.OK)
     public Usuario salvarUsuario(@RequestParam String nome,
                                  @RequestParam String cpf){
+
         return service.salvarUsuario(nome, cpf);
     }
 
-    //Lista todos os usuarios
     @GetMapping("/listarUsuarios")
     @ResponseStatus(HttpStatus.OK)
     public List<Usuario> listarUsuarios(){
         return service.listarUsuarios();
     }
 
-    //Retorna usuario pelo ID
     @GetMapping("/listarUsuarioId")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Usuario> listarUsuarioId(@RequestParam Long idUsuario){
-        return service.listarUsuarioId(idUsuario);
+        return service.listaUsuarioId(idUsuario);
     }
 
     //Atualiza usuario pelo ID
@@ -52,5 +51,7 @@ public class UsuarioController {
     public void apagarUsuarioId(@RequestParam Long idUsuario){
         service.apagarUsuario(idUsuario);
     }
+
+
 
 }
