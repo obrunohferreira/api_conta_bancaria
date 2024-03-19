@@ -39,7 +39,7 @@ public class UsuarioController {
         return service.listarUsuarioId(idUsuario);
     }
 
-    //Atualiza usuario pelo ID testando
+    //Atualiza usuario pelo ID
     @PutMapping("/atualizarUsuario/{idUsuario}")
     @ResponseStatus(HttpStatus.OK)
     public Usuario atualizarUsuario(@PathVariable Long idUsuario, @RequestBody Usuario usuario){
