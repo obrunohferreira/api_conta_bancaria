@@ -1,15 +1,10 @@
 package brunoferreira.sistemabancario.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 @Entity
 @Table(name = "tb-usuarios")
 public class Usuario {
@@ -23,14 +18,22 @@ public class Usuario {
     private String cpf;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Conta> contas;
 
-    public Usuario() {
+    public Usuario(){
     }
-    
+
     public Usuario(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
+    }
+
+    public Usuario(Long idUsuario, String nome, String cpf, List<Conta> contas) {
+        this.idUsuario = idUsuario;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.contas = contas;
     }
 
     public Long getIdUsuario() {

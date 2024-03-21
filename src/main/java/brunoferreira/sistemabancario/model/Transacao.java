@@ -16,37 +16,5 @@ public class Transacao {
     @Column(nullable = false)
     private Double valor;
 
-    public Transacao() {
-    }
-
-    public Transacao(Long idTransacao, Conta conta, Double valor) {
-        this.idTransacao = idTransacao;
-        this.conta = conta;
-        this.valor = valor;
-    }
-
-    public Long getIdTransacao() {
-        return idTransacao;
-    }
-
-    public void setIdTransacao(Long idTransacao) {
-        this.idTransacao = idTransacao;
-    }
-
-    public Conta getConta() {
-        return conta;
-    }
-
-    public void setConta(Conta conta) {
-        this.conta = conta;
-    }
-
-    public Double getValor() {
-        return valor;
-    }
-
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
 
 }

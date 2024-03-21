@@ -1,6 +1,9 @@
 package brunoferreira.sistemabancario.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -22,16 +25,24 @@ public class Conta {
     private Usuario usuario;
 
     @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Transacao> transacoes;
 
     public Conta() {
     }
 
-    public Conta(Long idConta, Double saldo, String tipo, Usuario usuario) {
+    public Conta(Double saldo, String tipo, Usuario usuario) {
+        this.saldo = saldo;
+        this.tipo = tipo;
+        this.usuario = usuario;
+    }
+
+    public Conta(Long idConta, Double saldo, String tipo, Usuario usuario, List<Transacao> transacoes) {
         this.idConta = idConta;
         this.saldo = saldo;
         this.tipo = tipo;
         this.usuario = usuario;
+        this.transacoes = transacoes;
     }
 
     public Long getIdConta() {
@@ -56,10 +67,6 @@ public class Conta {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
     }
 
     public void setUsuario(Usuario usuario) {

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 public class TransacaoService {
-    @Autowired
+    /*@Autowired
     private TransacaoRepository transacaoRepository;
 
     @Autowired
@@ -37,4 +37,6 @@ public class TransacaoService {
             throw new RuntimeException("Conta não encontrada" + idConta);
         }
     }
+
+     */
 }

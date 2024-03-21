@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TransacaoController {
-    @Autowired
+    /*@Autowired
     private TransacaoService transacaoService;
 
     @PostMapping("/realizarDeposito")
@@ -17,4 +17,5 @@ public class TransacaoController {
         return transacaoService.realizaDeposito(idConta, valor);
     }
 
+     */
 }

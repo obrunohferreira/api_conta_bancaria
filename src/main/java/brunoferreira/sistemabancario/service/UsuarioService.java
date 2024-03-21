@@ -1,5 +1,6 @@
 package brunoferreira.sistemabancario.service;
 
+import brunoferreira.sistemabancario.model.Conta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,18 +21,25 @@ public class UsuarioService {
         return repository.save(usuario);
     }
 
-    //Atualiza um usuario
-    public Usuario atualizarUsuario(Long idUsuario, Usuario usuario){
+    // Atualiza um usuario
+    public Usuario atualizarUsuario(Long idUsuario, Usuario usuarioAtualizado) {
         //Verifica se o usuário existe no banco de dados
         Optional<Usuario> usuarioOptional = repository.findById(idUsuario);
         if (usuarioOptional.isEmpty()) {
             throw new RuntimeException("Usuário não encontrado: " + idUsuario);
         }
 
-        return repository.saveAndFlush(usuario);
+        //Obter o usuário existente do Optional
+        Usuario usuarioExistente = usuarioOptional.get();
+
+        //Atualizar os campos do usuário existente com os valores do usuário atualizado
+        usuarioExistente.setNome(usuarioAtualizado.getNome());
+        usuarioExistente.setCpf(usuarioAtualizado.getCpf());
+
+        return repository.save(usuarioExistente);
     }
 
-    //Apaga um usuario
+    //Apaga um usuario pelo id
     public void apagarUsuario(Long idUsuario){
         //Verifica se o usuário existe no banco de dados
         Optional<Usuario> usuarioOptional = repository.findById(idUsuario);

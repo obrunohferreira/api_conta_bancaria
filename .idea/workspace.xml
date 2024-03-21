@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d702c35-ecd2-4494-9c5e-5498ef67d08a" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3d702c35-ecd2-4494-9c5e-5498ef67d08a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/ContaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/TransacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Transacao.java" afterDir="false" />
@@ -37,7 +38,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -51,17 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SistemaBancarioApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/www/sistema-bancario/src/main/java/brunoferreira/sistemabancario&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/BRUNO/www/sistema-bancario&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SistemaBancarioApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "D:/www/sistema-bancario/src/main/java/brunoferreira/sistemabancario",
+    "last_opened_file_path": "D:/BRUNO/www/sistema-bancario",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="SistemaBancarioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="brunoferreira.sistemabancario.SistemaBancarioApplication" />

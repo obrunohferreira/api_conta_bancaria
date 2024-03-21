@@ -1,5 +1,6 @@
 package brunoferreira.sistemabancario.controller;
 
+import brunoferreira.sistemabancario.model.Conta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -25,18 +26,6 @@ public class UsuarioController {
         return service.salvarUsuario(nome, cpf);
     }
 
-    @GetMapping("/listarUsuarios")
-    @ResponseStatus(HttpStatus.OK)
-    public List<Usuario> listarUsuarios(){
-        return service.listarUsuarios();
-    }
-
-    @GetMapping("/listarUsuarioId")
-    @ResponseStatus(HttpStatus.OK)
-    public Optional<Usuario> listarUsuarioId(@RequestParam Long idUsuario){
-        return service.listaUsuarioId(idUsuario);
-    }
-
     //Atualiza usuario pelo ID
     @PutMapping("/atualizarUsuario/{idUsuario}")
     @ResponseStatus(HttpStatus.OK)
@@ -52,6 +41,16 @@ public class UsuarioController {
         service.apagarUsuario(idUsuario);
     }
 
+    @GetMapping("/listarUsuarios")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Usuario> listarUsuarios(){
+        return service.listarUsuarios();
+    }
 
+    @GetMapping("/listarUsuarioId")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<Usuario> listarUsuarioId(@RequestParam Long idUsuario){
+        return service.listarUsuarioId(idUsuario);
+    }
 
 }
