@@ -13,7 +13,6 @@ import java.util.Optional;
 
 @RestController
 public class UsuarioController {
-    //Injetando o a classe service
     @Autowired
     private UsuarioService service;
 
@@ -41,12 +40,14 @@ public class UsuarioController {
         service.apagarUsuario(idUsuario);
     }
 
+    //Retorna todos usuarios cadastrados
     @GetMapping("/listarUsuarios")
     @ResponseStatus(HttpStatus.OK)
     public List<Usuario> listarUsuarios(){
         return service.listarUsuarios();
     }
 
+    //Retorna usuario por seu id
     @GetMapping("/listarUsuarioId")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Usuario> listarUsuarioId(@RequestParam Long idUsuario){

@@ -21,8 +21,8 @@ public class Conta {
     private String tipo;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuario; //para criar uma conta é necessário haver ao menos 1 usuario cadastrado
 
     @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
     @JsonIgnore

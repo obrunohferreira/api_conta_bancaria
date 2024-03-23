@@ -11,6 +11,7 @@ public class TransacaoController {
     @Autowired
     private TransacaoService transacaoService;
 
+    //Faz a transação de deposito
     @PostMapping("/realizarDeposito")
     @ResponseStatus(HttpStatus.OK)
     public Transacao realizarDepositar(@RequestParam Long idConta,
@@ -18,6 +19,7 @@ public class TransacaoController {
         return transacaoService.realizarDeposito(idConta, valor);
     }
 
+    //Faz a transação de saque
     @PostMapping("/realizarSaque")
     @ResponseStatus(HttpStatus.OK)
     public Transacao realizarSaque(@RequestParam Long idConta,

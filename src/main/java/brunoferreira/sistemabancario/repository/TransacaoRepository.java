@@ -10,6 +10,8 @@ import java.util.List;
 
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {
+
+    //fornece a consulta para o extrato na classe ContaService
     @Query("SELECT t FROM Transacao t WHERE t.conta.id = :idConta")
     List<Transacao> extrato(Long idConta);
 }

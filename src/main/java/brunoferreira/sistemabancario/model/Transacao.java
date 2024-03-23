@@ -10,14 +10,14 @@ public class Transacao {
     private Long idTransacao;
 
     @ManyToOne
-    @JoinColumn(name = "id_conta")
-    private Conta conta;
+    @JoinColumn(name = "id_conta", nullable = false)
+    private Conta conta; //para ter uma transação (deposito ou saque) deve haver ao menos 1 conta
 
     @Column(nullable = false)
     private Double valor;
 
     @Column(nullable = false)
-    private String descricao;
+    private String descricao; //informa se é deposito ou saque
 
     public Transacao() {
     }

@@ -1,6 +1,5 @@
 package brunoferreira.sistemabancario.service;
 
-import brunoferreira.sistemabancario.model.Conta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,51 +12,51 @@ import java.util.Optional;
 @Service
 public class UsuarioService {
     @Autowired
-    private UsuarioRepository repository;
+    private UsuarioRepository usuarioRepository;
 
-    //Salva um usuario
+    //Para salvar um usuario
     public Usuario salvarUsuario(String nome, String cpf){
         Usuario usuario = new Usuario(nome, cpf);
-        return repository.save(usuario);
+        return usuarioRepository.save(usuario);
     }
 
-    // Atualiza um usuario
+    //Para autalizar um usuario por seu id
     public Usuario atualizarUsuario(Long idUsuario, Usuario usuarioAtualizado) {
         //Verifica se o usuário existe no banco de dados
-        Optional<Usuario> usuarioOptional = repository.findById(idUsuario);
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
         if (usuarioOptional.isEmpty()) {
             throw new RuntimeException("Usuário não encontrado: " + idUsuario);
         }
 
-        //Obter o usuário existente do Optional
+        //Obtem o usuário existente do Optional
         Usuario usuarioExistente = usuarioOptional.get();
 
-        //Atualizar os campos do usuário existente com os valores do usuário atualizado
+        //Atualiza os campos do usuário existente com os valores do usuário atualizado
         usuarioExistente.setNome(usuarioAtualizado.getNome());
         usuarioExistente.setCpf(usuarioAtualizado.getCpf());
 
-        return repository.save(usuarioExistente);
+        return usuarioRepository.save(usuarioExistente);
     }
 
-    //Apaga um usuario pelo id
+    //Para apagar um usuario por seu id
     public void apagarUsuario(Long idUsuario){
         //Verifica se o usuário existe no banco de dados
-        Optional<Usuario> usuarioOptional = repository.findById(idUsuario);
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
         if (usuarioOptional.isEmpty()) {
             throw new RuntimeException("Usuário não encontrado: " + idUsuario);
         }
-
-        repository.deleteById(idUsuario);
+        //Efetua a deleção
+        usuarioRepository.deleteById(idUsuario);
     }
 
-    //Lista todos usuarios
+    //Para listar todos os usuarios no banco de dados
     public List<Usuario> listarUsuarios(){
-        return repository.findAll();
+        return usuarioRepository.findAll();
     }
 
-    //Lista usuario por id
+    //Para listar o usuario por seu id
     public Optional<Usuario> listarUsuarioId(Long idUsuario){
-        return repository.findById(idUsuario);
+        return usuarioRepository.findById(idUsuario);
     }
 
 }

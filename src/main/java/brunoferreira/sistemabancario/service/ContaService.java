@@ -22,12 +22,12 @@ public class ContaService {
     @Autowired
     private TransacaoRepository transacaoRepository;
 
-    //Salva uma nova conta
+    //Para salvar uma conta
     public Conta salvarConta(@RequestBody Conta conta){;
        return contaRepository.save(conta);
     }
 
-    //Atualiza tipo da conta pelo id
+    //Para atualizar tipo da conta por seu id
     public Conta atualizarConta(Long idConta, Conta contaAtualizada) {
         //Verifica se o usuário existe no banco de dados
         Optional<Conta> contaOptional = contaRepository.findById(idConta);
@@ -35,18 +35,18 @@ public class ContaService {
             throw new RuntimeException("Conta não encontrada: " + idConta);
         }
 
-        //Obter o usuário existente do Optional
+        //Obtem a conta existente do Optional
         Conta contaExistente = contaOptional.get();
 
-        //Atualizar os campos do usuário existente com os valores do usuário atualizado
+        //Atualiza o campo de tipo da conta existente
         contaExistente.setTipo(contaAtualizada.getTipo());
 
         return contaRepository.save(contaExistente);
     }
 
-    //Apaga uma conta pelo id
+    //Para apagar uma conta por seu id
     public void apagarConta(Long idConta){
-        //Verifica se o usuário existe no banco de dados
+        //Verifica se a conta existe no banco de dados
         Optional<Conta> contaOptional = contaRepository.findById(idConta);
         if (contaOptional.isEmpty()) {
             throw new RuntimeException("Usuário não encontrado: " + idConta);
@@ -56,16 +56,17 @@ public class ContaService {
 
     }
 
+    //Para ter um extrato de todas as transaçoes pelo id da conta
     public List<Transacao> extrato(Long idConta){
         return transacaoRepository.extrato(idConta);
     }
 
-    //Lista todas contas
+    //Para listar todas as contas no banco de dados
     public List<Conta> listarContas(){
         return contaRepository.findAll();
     }
 
-    //Lista conta por id
+    //Para listar uma conta por seu id
     public Optional<Conta> listarContaId(Long idConta){
         return contaRepository.findById(idConta);
     }

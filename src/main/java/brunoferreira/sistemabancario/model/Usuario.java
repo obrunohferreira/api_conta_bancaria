@@ -18,7 +18,7 @@ public class Usuario {
     private String cpf;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    @JsonIgnore
+    @JsonIgnore //para não ocorrer loop na hora de criar o JSON -> sempre fica do lado ONE TO MANY
     private List<Conta> contas;
 
     public Usuario(){
