@@ -11,17 +11,18 @@ import java.util.Optional;
 
 @Service
 public class TransacaoService {
-    /*@Autowired
+    @Autowired
     private TransacaoRepository transacaoRepository;
 
     @Autowired
     private ContaRepository contaRepository;
 
-    public Transacao realizaDeposito(Long idConta, Double valor){
-        Optional<Conta> optionalConta = contaRepository.findById(idConta);
+    //Para fazer um deposito
+    public Transacao realizarDeposito(Long idConta, Double valor){
+        Optional<Conta> contaOptional = contaRepository.findById(idConta);
 
-        if(optionalConta.isPresent()){
-            Conta conta = optionalConta.get();
+        if(contaOptional.isPresent()){
+            Conta conta = contaOptional.get();
             Double saldoAtual = conta.getSaldo();
             Double saldoAdd = saldoAtual + valor;
 
@@ -31,12 +32,39 @@ public class TransacaoService {
             Transacao transacao = new Transacao();
             transacao.setConta(conta);
             transacao.setValor(valor);
+            transacao.setDescricao("Deposito");
 
             return transacaoRepository.save(transacao);
         }else{
-            throw new RuntimeException("Conta não encontrada" + idConta);
+            throw new RuntimeException("Conta não encontrada: " + idConta);
         }
     }
 
-     */
+    //Para fazer um saque
+    public Transacao realizarSaque(Long idConta, Double valor){
+        Optional<Conta> contaOptional = contaRepository.findById(idConta);
+
+        if(contaOptional.isEmpty()){
+            throw new RuntimeException("Conta não encontrada: " + idConta);
+        }
+
+        Conta conta = contaOptional.get();
+        Double saldoAtual = conta.getSaldo();
+        if(saldoAtual <= 0){
+            throw  new RuntimeException("Conta não possui saldo para sacar: " + saldoAtual);
+        }else{
+            Double saldoDrop = saldoAtual - valor;
+
+            conta.setSaldo(saldoDrop);
+            contaRepository.save(conta);
+
+            Transacao transacao = new Transacao();
+            transacao.setConta(conta);
+            transacao.setValor(valor);
+            transacao.setDescricao("Saque");
+
+            return transacaoRepository.save(transacao);
+        }
+
+    }
 }

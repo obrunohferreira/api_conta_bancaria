@@ -8,13 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/ContaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/TransacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/repository/TransacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/repository/TransacaoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/ContaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brunoferreira/sistemabancario/service/UsuarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.SistemaBancarioApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "D:/www/sistema-bancario/src/main/java/brunoferreira/sistemabancario",
-    "last_opened_file_path": "D:/BRUNO/www/sistema-bancario",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.general"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.SistemaBancarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/www/sistema-bancario/src/main/java/brunoferreira/sistemabancario&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/BRUNO/www/sistema-bancario&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SistemaBancarioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="brunoferreira.sistemabancario.SistemaBancarioApplication" />

@@ -8,14 +8,20 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TransacaoController {
-    /*@Autowired
+    @Autowired
     private TransacaoService transacaoService;
 
     @PostMapping("/realizarDeposito")
     @ResponseStatus(HttpStatus.OK)
-    public Transacao realizarDepositar(@RequestParam Long idConta, @RequestParam Double valor) {
-        return transacaoService.realizaDeposito(idConta, valor);
+    public Transacao realizarDepositar(@RequestParam Long idConta,
+                                       @RequestParam Double valor) {
+        return transacaoService.realizarDeposito(idConta, valor);
     }
 
-     */
+    @PostMapping("/realizarSaque")
+    @ResponseStatus(HttpStatus.OK)
+    public Transacao realizarSaque(@RequestParam Long idConta,
+                                   @RequestParam Double valor){
+        return transacaoService.realizarSaque(idConta, valor);
+    }
 }
